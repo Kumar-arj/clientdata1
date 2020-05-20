@@ -18,8 +18,11 @@ if(isset($_POST['submit']))
 	$sql="insert into tbl_conv values('$firstname','$lastname','$email','$phone','$Websitetype','$WebpageRequired','$Contentwriting','$developmenttime','$HostingServices','$DomainName')";
 	if(mysqli_query($conn,$sql)==True)
 	{
-		echo "<script> alert('Inserted Successfully') </script>";
-	 header("Location:index2.php");
+		echo "<script>
+		 alert('Inserted Successfully');
+		 window.location.href='index2.php' ;
+		 </script>";
+	
 	}
 	else
 	{  
